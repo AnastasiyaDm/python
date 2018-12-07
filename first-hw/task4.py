@@ -2,12 +2,7 @@ a = [10, 11, 2, 3, 5, 8, 23, 11, 2, 5, 76, 43, 2, 32, 76, 3, 10, 0, 1]
 
 
 def remove_duplicates(args):
-    result = sorted(args)
-    i = len(result)-1
-    while i > 0:
-        if result[i] == result[i-1]:
-            del result[i]
-        i -= 1
+    result = set(args)
     print(result)
 
 
