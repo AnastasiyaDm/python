@@ -18,3 +18,17 @@ print(sorted(data,key=sort_age))
 
 #1.2) сгруппировать данные по значению ключа 'city' 
 # вывод должен быть такого вида :
+
+
+def sort_city(dat):
+    result = {}
+    for i in dat:
+        a = i.get('city')
+        if a in result:
+            result[a].append({'name': i.get('name'), 'age': i.get('age')})
+        else:
+            result[a] = [{'name': i.get('name'), 'age': i.get('age')}]
+
+    return result
+
+print(sort_city(data))
