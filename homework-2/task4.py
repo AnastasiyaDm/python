@@ -3,11 +3,7 @@
 
 
 def some_function(array, n):
-
-    if n > len(array)-1 or n < -len(array):
-        return -1
-    else:
-        return array[n]**n
+    return -1 if n > len(array)-1 or n < -len(array) else array[n]**n
 
 
 input_arr = [1, 5, 6, 8, 9, 2, 0, 0, 1, 2, 3, 10, 1, 5]

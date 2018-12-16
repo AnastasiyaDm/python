@@ -10,11 +10,9 @@ data = [
     {'name': 'Dmitriy', 'city': 'Lviv', 'age': 21}]
 
 
-def sort_age(age_sort):
-    return age_sort.get('age')
 
+print(sorted(data,key=lambda k: k["age"]))
 
-print(sorted(data,key=sort_age))
 
 #1.2) сгруппировать данные по значению ключа 'city' 
 # вывод должен быть такого вида :

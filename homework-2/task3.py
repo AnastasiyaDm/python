@@ -4,11 +4,10 @@
 
 
 def multiply(s):
-    if s != 0:
+    if s:
         result = 1
         for i in str(s):
-            if i != '0':
-                result *= int(i)
+            result *= int(i) if int(i) else 1
     else:
         result = 0
     return result

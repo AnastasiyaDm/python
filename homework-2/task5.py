@@ -4,16 +4,15 @@
 
 
 def find_words(x, c):
-    result = ''
+    result = []
+    string = ''
     for i in x.split():
-        if i.isalpha():
-            result += 'w'
-        else:
-            result += 'd'
-    return True if 'w' * c in result else False
+        result.append('w') if i.isalpha() else result.append('d')
+    string = ''.join(result)
+    return True if 'w'*c in string else False
 
 
-n = 'hello hello 1 one two three 15 world'
+n = "hello 1 one two three four five15 world"
 count = 3
 print(find_words(n, count))
 
