@@ -10,13 +10,12 @@
 # each element of array A is an integer within the range [−1,000,000..1,000,000].
 
 from random import randint
-N = randint(1, 100000)
+N = randint(1, 10000)
 A = [randint(-1000000, 1000000) for x in range(0, N)]
 
-
 def solution(a):
-    return min(list(filter(lambda x: x > 0 and x not in a, [int(i) for i in range(0, 1000000)])))
+    return min(list(filter(lambda x: x > 0 and x not in a, [int(i) for i in range(1, len(a)+2)])))
 
 
-print(A)
+print(N, A) # to check
 print(solution(A))

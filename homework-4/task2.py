@@ -26,11 +26,10 @@ N = randint(1, 2147483647)
 
 def solution(n):
     b = bin(n)
-    print(b)
+    print(b)# to check
     return max([i.count('0') for i in b[2:].strip('0').split('1')])
 
 
-print(N)
 print(solution(N))
 
 

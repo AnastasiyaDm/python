@@ -37,6 +37,6 @@ def solution(a, k):
     return a[-rotate_counter:] + a[:-rotate_counter]
 
 
-print(K, A)
+print(K, A)#to check
 print(solution(A, K))
 
